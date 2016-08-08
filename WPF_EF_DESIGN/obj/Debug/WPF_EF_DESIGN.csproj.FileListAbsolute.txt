@@ -17,4 +17,14 @@ C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_E
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\obj\Debug\WPF_EF_DESIGN.exe
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\obj\Debug\WPF_EF_DESIGN.pdb
-C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MaterialDesignColors.dll
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MaterialDesignColors.pdb
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\obj\Debug\App.baml
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MahApps.Metro.dll
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MahApps.Metro.pdb
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MahApps.Metro.xml
