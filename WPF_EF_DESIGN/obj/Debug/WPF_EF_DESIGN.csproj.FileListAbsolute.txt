@@ -28,3 +28,7 @@ C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_E
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MahApps.Metro.pdb
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\MahApps.Metro.xml
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\WPF_EF_DESIGN.exe.manifest
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\bin\Debug\WPF_EF_DESIGN.application
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\obj\Debug\WPF_EF_DESIGN.exe.manifest
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WPF_EF_DESIGN\obj\Debug\WPF_EF_DESIGN.application
