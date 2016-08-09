@@ -8,7 +8,7 @@
     <Property Name="Nome" Type="varchar" MaxLength="50" />
     <Property Name="Endereco" Type="varchar" MaxLength="50" />
     <Property Name="Cidade" Type="varchar" MaxLength="50" />
-    <Property Name="Estado" Type="char" MaxLength="2" />
+    <Property Name="Estado" Type="nchar" MaxLength="10" />
     <Property Name="Telefone" Type="varchar" MaxLength="50" />
     <Property Name="Obs" Type="varchar" MaxLength="1000" />
   </EntityType>
@@ -20,10 +20,12 @@
     <Property Name="Nome" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="100" />
     <Property Name="Telefone" Type="varchar" MaxLength="50" />
-    <Property Name="Cliente" Type="int" Nullable="false" />
+    <Property Name="Cliente" Type="int" />
   </EntityType>
   <Association Name="FK_Contatos_Clientes">
-    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Contatos" Type="Self.Contatos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Clientes">

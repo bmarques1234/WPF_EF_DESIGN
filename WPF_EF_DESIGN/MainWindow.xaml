@@ -5,25 +5,30 @@
         TextElement.FontSize="14"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="467" Width="759.5">
-    <Grid Margin="0,0,-8,0">
+        Title="MainWindow" Height="494" Width="760" MinWidth="760" MinHeight="494">
+    <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="86*" />
-            <ColumnDefinition Width="243*"/>
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="233*"/>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="431*" />
+            <ColumnDefinition Width="419*" />
         </Grid.ColumnDefinitions>
-        <DockPanel Grid.Column="0">
-        </DockPanel>
+        <Grid Margin="0,0,0,0" Grid.Column="0" HorizontalAlignment="Left" Width="93">
+            <TextBox Height="28" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Margin="10,0,3,0"/>
+            <CheckBox Content="Filtro 2" Height="28" VerticalAlignment="Top" Margin="10,66,3,0"/>
+            <CheckBox Content="Filtro 1" Margin="10,33,3,0" VerticalAlignment="Top" Height="28"/>
+            <ComboBox Margin="10,99,3,0" VerticalAlignment="Top" Height="28"/>
+            <Button Content="Buscar" Margin="10,132,3,0" VerticalAlignment="Top" Height="28"/>
+        </Grid>
         <DockPanel Margin="10,10,0,0" Grid.Column="1">
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" Margin="-1,0,0,0">
-                <Button x:Name="button1" Content="Novo" Margin="5" Click="button1_Click"/>
-                <Button x:Name="button2" Content="Exclui" Margin="5" Click="button2_Click"/>
-                <Button x:Name="button3" Content="Salva" Margin="5" Click="button3_Click"/>
+                <Button x:Name="newClient" Content="Novo" Margin="5" Click="NewClient_Click"/>
+                <Button x:Name="deleteClient" Content="Exclui" Margin="5" Click="DeleteClient_Click"/>
+                <Button x:Name="save" Content="Salva" Margin="5" Click="Save_Click"/>
             </StackPanel>
-            <ListBox Name="listBox1" Margin="5,0,0,5" DisplayMemberPath="Nome" SelectionChanged="listBox1_SelectionChanged" />
+            <ListBox x:Name="listClients" Margin="5,0,0,5" DisplayMemberPath="Nome" SelectionChanged="ListClients_SelectionChanged" />
         </DockPanel>
-        <Grid Grid.Column="2" DataContext="{Binding ElementName=listBox1,Path=SelectedItem}" Margin="0,10,0,0" Grid.ColumnSpan="2">
+        <Grid Grid.Column="2" DataContext="{Binding SelectedItem, ElementName=listClients}" Margin="0,10,0,0" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -44,16 +49,16 @@
             <TextBlock Text="Estado" Grid.Row="3"  Margin="5" VerticalAlignment="Center"/>
             <TextBlock Text="Telefone" Grid.Row="4"  Margin="5" VerticalAlignment="Center"/>
             <TextBlock Text="Obs" Grid.Row="5"  Margin="5" VerticalAlignment="Center"/>
-            <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Text="{Binding Nome,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged"/>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Text="{Binding Endereco,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged_1"/>
-            <TextBox Grid.Row="2" Grid.Column="1" Margin="5" Text="{Binding Cidade,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged_2"/>
-            <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Text="{Binding  Estado,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged_3"/>
-            <TextBox Grid.Row="4" Grid.Column="1" Margin="5" Text="{Binding Telefone,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged_4"/>
-            <TextBox Grid.Row="5" Grid.Column="1" Margin="5" Text="{Binding Obs,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged_5"/>
-            <TabControl x:Name="tabControl1" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" />
+            <TextBox x:Name="textBoxName" Grid.Row="0" Grid.Column="1" Margin="5,5,5,10" />
+            <TextBox x:Name="textBoxAddress" Grid.Row="1" Grid.Column="1" Margin="5" />
+            <TextBox x:Name="textBoxCity" Grid.Row="2" Grid.Column="1" Margin="5" />
+            <TextBox x:Name="textBoxEstate" Grid.Row="3" Grid.Column="1" Margin="5" />
+            <TextBox x:Name="textBoxPhone" Grid.Row="4" Grid.Column="1" Margin="5" />
+            <TextBox x:Name="textBoxObs" Grid.Row="5" Grid.Column="1" Margin="5" />
+            <TabControl x:Name="tabControlContacts" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" />
             <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="280">
-                <Button Margin="5" Content="Novo contato" Click="Button_Click" />
-                <Button Margin="5" Content="Exclui contato" Click="Button_Click_1" />
+                <Button x:Name="newContact" Margin="5" Content="Novo contato" Click="NewContact_Click" />
+                <Button x:Name="deleteContact" Margin="5" Content="Exclui contato" Click="DeleteContact_Click" />
             </StackPanel>
         </Grid>
     </Grid>

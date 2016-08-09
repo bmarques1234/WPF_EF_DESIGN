@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Clientes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cidade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contatos" nillable="true" type="tns:ArrayOfContatos" />
+      <xs:element minOccurs="0" name="Endereco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Obs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Clientes" nillable="true" type="tns:Clientes" />
+  <xs:complexType name="ArrayOfContatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contatos" nillable="true" type="tns:Contatos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContatos" nillable="true" type="tns:ArrayOfContatos" />
+  <xs:complexType name="Contatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Clientes" nillable="true" type="tns:Clientes" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contatos" nillable="true" type="tns:Contatos" />
+  <xs:complexType name="ArrayOfClientes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Clientes" nillable="true" type="tns:Clientes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientes" nillable="true" type="tns:ArrayOfClientes" />
+</xs:schema>

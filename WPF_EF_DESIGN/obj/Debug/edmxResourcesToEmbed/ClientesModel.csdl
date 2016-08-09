@@ -16,7 +16,7 @@
     <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Endereco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Estado" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Obs" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Contatos" Relationship="ClientesModel.FK_Contatos_Clientes" FromRole="Clientes" ToRole="Contatos" />
@@ -29,11 +29,13 @@
     <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Cliente" Type="Int32" />
     <NavigationProperty Name="Clientes" Relationship="ClientesModel.FK_Contatos_Clientes" FromRole="Contatos" ToRole="Clientes" />
   </EntityType>
   <Association Name="FK_Contatos_Clientes">
-    <End Type="ClientesModel.Clientes" Role="Clientes" Multiplicity="1" />
+    <End Type="ClientesModel.Clientes" Role="Clientes" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="ClientesModel.Contatos" Role="Contatos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Clientes">

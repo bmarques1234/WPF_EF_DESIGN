@@ -64,12 +64,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="MahApps.Metro">
       <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -91,6 +85,7 @@
     <Reference Include="System.Printing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -113,49 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Categories.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Contacts.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerDemographics.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customers.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employees.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NorthwindModel.cs">
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Orders.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Details.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Products.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Region.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shippers.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Suppliers.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Territories.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Page Include="ContatoControl.xaml">
       <SubType>Designer</SubType>
@@ -169,29 +125,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Clientes.cs">
-      <DependentUpon>ClientesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClientesModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientesModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClientesModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClientesModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientesModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="ContatoControl.xaml.cs">
       <DependentUpon>ContatoControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Contatos.cs">
-      <DependentUpon>ClientesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -199,16 +134,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NorthwindModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NorthwindModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -226,40 +151,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="ClientesModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ClientesModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ClientesModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClientesModel.edmx</DependentUpon>
-      <LastGenOutput>ClientesModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="ClientesModel.edmx.diagram">
-      <DependentUpon>ClientesModel.edmx</DependentUpon>
-    </None>
-    <None Include="ClientesModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClientesModel.edmx</DependentUpon>
-      <LastGenOutput>ClientesModel.cs</LastGenOutput>
-    </None>
-    <EntityDeploy Include="NorthwindModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="NorthwindModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-      <LastGenOutput>NorthwindModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="NorthwindModel.edmx.diagram">
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-    </None>
-    <None Include="NorthwindModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-      <LastGenOutput>NorthwindModel.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Clientes.datasource" />
     <None Include="Properties\DataSources\Contatos.datasource" />
@@ -268,6 +159,22 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\ServiceReference1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\WPF_EF_DESIGN.ServiceReference1.Clientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\WPF_EF_DESIGN.ServiceReference1.Contatos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="WPF_EF_DESIGN_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -292,6 +199,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
