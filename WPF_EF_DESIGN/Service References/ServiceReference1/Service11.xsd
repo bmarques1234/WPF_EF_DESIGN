@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:31998/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" />
+  <xs:import schemaLocation="http://localhost:31998/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Wcf_Exemplo.DTO" />
   <xs:element name="CreateClient">
     <xs:complexType>
       <xs:sequence />
@@ -16,7 +17,7 @@
   <xs:element name="DeleteClient">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="cli" nillable="true" type="q2:Clientes" />
+        <xs:element minOccurs="0" name="cliObj" nillable="true" type="xs:anyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -35,15 +36,13 @@
   <xs:element name="SearchClientResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="SearchClientResult" nillable="true" type="q3:ArrayOfClientes" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wcf_Exemplo.DTO" minOccurs="0" name="SearchClientResult" nillable="true" type="q2:ArrayOfClienteBag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateClient">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="cli" nillable="true" type="q4:Clientes" />
-      </xs:sequence>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateClientResponse">
@@ -56,22 +55,22 @@
   <xs:element name="CreateContact">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="cli" nillable="true" type="q5:Clientes" />
+        <xs:element minOccurs="0" name="cliObj" nillable="true" type="xs:anyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CreateContactResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="CreateContactResult" nillable="true" type="q6:Clientes" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wcf_Exemplo.DTO" minOccurs="0" name="CreateContactResult" nillable="true" type="q3:ContatoBag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DeleteContact">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="cli" nillable="true" type="q7:Clientes" />
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="con" nillable="true" type="q8:Contatos" />
+        <xs:element minOccurs="0" name="cliObj" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="conObj" nillable="true" type="xs:anyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -85,14 +84,14 @@
   <xs:element name="SearchContact">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="cli" nillable="true" type="q9:Clientes" />
+        <xs:element minOccurs="0" name="cliObj" nillable="true" type="xs:anyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SearchContactResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Wcf_Exemplo" minOccurs="0" name="SearchContactResult" nillable="true" type="q10:ArrayOfContatos" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Wcf_Exemplo.DTO" minOccurs="0" name="SearchContactResult" nillable="true" type="q4:ArrayOfContatoBag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

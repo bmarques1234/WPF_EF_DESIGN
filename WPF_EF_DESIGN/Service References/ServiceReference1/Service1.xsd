@@ -30,10 +30,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Contatos" nillable="true" type="tns:Contatos" />
-  <xs:complexType name="ArrayOfClientes">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Clientes" nillable="true" type="tns:Clientes" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfClientes" nillable="true" type="tns:ArrayOfClientes" />
 </xs:schema>

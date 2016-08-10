@@ -152,8 +152,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Clientes.datasource" />
-    <None Include="Properties\DataSources\Contatos.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,10 +167,16 @@
     <None Include="Service References\ServiceReference1\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReference1\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\WPF_EF_DESIGN.ServiceReference1.ClienteBag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference1\WPF_EF_DESIGN.ServiceReference1.Clientes.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WPF_EF_DESIGN.ServiceReference1.Contatos.datasource">
+    <None Include="Service References\ServiceReference1\WPF_EF_DESIGN.ServiceReference1.ContatoBag.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="WPF_EF_DESIGN_TemporaryKey.pfx" />
@@ -220,6 +224,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

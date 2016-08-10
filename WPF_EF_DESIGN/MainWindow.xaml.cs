@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.ServiceModel;
 
 namespace WPF_EF_DESIGN
 {
@@ -26,7 +27,7 @@ namespace WPF_EF_DESIGN
         ServiceReference1.Service1Client wcfService = new ServiceReference1.Service1Client();
 
         public MainWindow()
-        {
+        {            
             InitializeComponent();
             /*foreach (var c in _context.Clientes)
             {
@@ -34,18 +35,28 @@ namespace WPF_EF_DESIGN
             }
             listClients.ItemsSource = cliLista;*/
             //cliLista = wcfService.SearchClient();
-            listClients.ItemsSource = wcfService.SearchClient();
+            try
+            {
+                var teste = wcfService.SearchClient();
+                listClients.ItemsSource = teste;
+            }
+            catch (CommunicationException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            //listClients.ItemsSource = wcfService.SearchClient();
         }
 
-        private void AdicionaTabContato(ServiceReference1.Contatos c)
+        private void AdicionaTabContato(ServiceReference1.ContatoBag c)
         {
-            /*TabItem item = new TabItem();
+            TabItem item = new TabItem();
             ContatoControl ctrl = new ContatoControl();
             ctrl.DataContext = c;
             item.Content = ctrl;
             item.Header = c.Id.ToString();
             tabControlContacts.Items.Add(item);
-            tabControlContacts.SelectedItem = item;*/
+            tabControlContacts.SelectedItem = item;
         }
 
         private void NewClient_Click(object sender, RoutedEventArgs e)
@@ -85,7 +96,8 @@ namespace WPF_EF_DESIGN
                 Contatos con = new Contatos() { Cliente = cli.Id, Nome = "Não identificado" };
                 cli.Contatos.Add(con);
                 AdicionaTabContato(con);*/
-                wcfService.CreateContact((ServiceReference1.Clientes)listClients.SelectedItem);
+                ServiceReference1.ContatoBag con = wcfService.CreateContact((ServiceReference1.Clientes)listClients.SelectedItem);
+                AdicionaTabContato(con);
             }
         }
 
@@ -101,7 +113,12 @@ namespace WPF_EF_DESIGN
                 {
                     tabControlContacts.SelectedIndex = 0;
                 }*/
-                wcfService.DeleteContact((ServiceReference1.Clientes)listClients.SelectedItem, (ServiceReference1.Contatos)tabControlContacts.SelectedItem);
+                wcfService.DeleteContact((ServiceReference1.Clientes)listClients.SelectedItem, (ServiceReference1.Contatos)((ContatoControl)((TabItem)tabControlContacts.SelectedItem).Content).DataContext);
+                tabControlContacts.Items.Remove(tabControlContacts.SelectedItem);
+                if (tabControlContacts.Items.Count > 0)
+                {
+                    tabControlContacts.SelectedIndex = 0;
+                }
             }
         }
 
@@ -115,8 +132,42 @@ namespace WPF_EF_DESIGN
                 {
                     AdicionaTabContato(c);
                 }*/
-                wcfService.SearchContact((ServiceReference1.Clientes)listClients.SelectedItem);
+                ServiceReference1.ContatoBag[] listCon = wcfService.SearchContact((ServiceReference1.ClienteBag)listClients.SelectedItem);
+                foreach (var c in listCon)
+                {
+                    AdicionaTabContato(c);
+                }
             }
+        }
+
+        private void TextBoxName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBoxAddress_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBoxCity_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBoxEstate_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBoxPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBoxObs_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
