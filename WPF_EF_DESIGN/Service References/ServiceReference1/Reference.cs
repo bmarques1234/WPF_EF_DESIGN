@@ -15,288 +15,6 @@ namespace WPF_EF_DESIGN.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Clientes", Namespace="http://schemas.datacontract.org/2004/07/Wcf_Exemplo")]
-    [System.SerializableAttribute()]
-    public partial class Clientes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CidadeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_EF_DESIGN.ServiceReference1.Contatos[] ContatosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EnderecoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NomeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ObsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TelefoneField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cidade {
-            get {
-                return this.CidadeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CidadeField, value) != true)) {
-                    this.CidadeField = value;
-                    this.RaisePropertyChanged("Cidade");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_EF_DESIGN.ServiceReference1.Contatos[] Contatos {
-            get {
-                return this.ContatosField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ContatosField, value) != true)) {
-                    this.ContatosField = value;
-                    this.RaisePropertyChanged("Contatos");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Endereco {
-            get {
-                return this.EnderecoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EnderecoField, value) != true)) {
-                    this.EnderecoField = value;
-                    this.RaisePropertyChanged("Endereco");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nome {
-            get {
-                return this.NomeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NomeField, value) != true)) {
-                    this.NomeField = value;
-                    this.RaisePropertyChanged("Nome");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Obs {
-            get {
-                return this.ObsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ObsField, value) != true)) {
-                    this.ObsField = value;
-                    this.RaisePropertyChanged("Obs");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Telefone {
-            get {
-                return this.TelefoneField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TelefoneField, value) != true)) {
-                    this.TelefoneField = value;
-                    this.RaisePropertyChanged("Telefone");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Contatos", Namespace="http://schemas.datacontract.org/2004/07/Wcf_Exemplo")]
-    [System.SerializableAttribute()]
-    public partial class Contatos : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ClienteField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_EF_DESIGN.ServiceReference1.Clientes ClientesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NomeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TelefoneField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Cliente {
-            get {
-                return this.ClienteField;
-            }
-            set {
-                if ((this.ClienteField.Equals(value) != true)) {
-                    this.ClienteField = value;
-                    this.RaisePropertyChanged("Cliente");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_EF_DESIGN.ServiceReference1.Clientes Clientes {
-            get {
-                return this.ClientesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ClientesField, value) != true)) {
-                    this.ClientesField = value;
-                    this.RaisePropertyChanged("Clientes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nome {
-            get {
-                return this.NomeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NomeField, value) != true)) {
-                    this.NomeField = value;
-                    this.RaisePropertyChanged("Nome");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Telefone {
-            get {
-                return this.TelefoneField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TelefoneField, value) != true)) {
-                    this.TelefoneField = value;
-                    this.RaisePropertyChanged("Telefone");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ClienteBag", Namespace="http://schemas.datacontract.org/2004/07/Wcf_Exemplo.DTO")]
     [System.SerializableAttribute()]
     public partial class ClienteBag : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -566,74 +284,46 @@ namespace WPF_EF_DESIGN.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClient", ReplyAction="http://tempuri.org/IService1/CreateClientResponse")]
-        WPF_EF_DESIGN.ServiceReference1.Clientes CreateClient();
+        bool CreateClient();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClient", ReplyAction="http://tempuri.org/IService1/CreateClientResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.Clientes> CreateClientAsync();
+        System.Threading.Tasks.Task<bool> CreateClientAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteClient", ReplyAction="http://tempuri.org/IService1/DeleteClientResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Clientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos))]
-        bool DeleteClient(object cliObj);
+        bool DeleteClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteClient", ReplyAction="http://tempuri.org/IService1/DeleteClientResponse")]
-        System.Threading.Tasks.Task<bool> DeleteClientAsync(object cliObj);
+        System.Threading.Tasks.Task<bool> DeleteClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchClient", ReplyAction="http://tempuri.org/IService1/SearchClientResponse")]
-        WPF_EF_DESIGN.ServiceReference1.ClienteBag[] SearchClient();
+        WPF_EF_DESIGN.ServiceReference1.ClienteBag[] SearchClient(string query, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchClient", ReplyAction="http://tempuri.org/IService1/SearchClientResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag[]> SearchClientAsync();
+        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag[]> SearchClientAsync(string query, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateClient", ReplyAction="http://tempuri.org/IService1/UpdateClientResponse")]
-        bool UpdateClient();
+        bool UpdateClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateClient", ReplyAction="http://tempuri.org/IService1/UpdateClientResponse")]
-        System.Threading.Tasks.Task<bool> UpdateClientAsync();
+        System.Threading.Tasks.Task<bool> UpdateClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateContact", ReplyAction="http://tempuri.org/IService1/CreateContactResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Clientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos))]
-        WPF_EF_DESIGN.ServiceReference1.ContatoBag CreateContact(object cliObj);
+        WPF_EF_DESIGN.ServiceReference1.ContatoBag CreateContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateContact", ReplyAction="http://tempuri.org/IService1/CreateContactResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag> CreateContactAsync(object cliObj);
+        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag> CreateContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteContact", ReplyAction="http://tempuri.org/IService1/DeleteContactResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Clientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos))]
-        bool DeleteContact(object cliObj, object conObj);
+        bool DeleteContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteContact", ReplyAction="http://tempuri.org/IService1/DeleteContactResponse")]
-        System.Threading.Tasks.Task<bool> DeleteContactAsync(object cliObj, object conObj);
+        System.Threading.Tasks.Task<bool> DeleteContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchContact", ReplyAction="http://tempuri.org/IService1/SearchContactResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ClienteBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.ContatoBag))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Clientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WPF_EF_DESIGN.ServiceReference1.Contatos))]
-        WPF_EF_DESIGN.ServiceReference1.ContatoBag[] SearchContact(object cliObj);
+        WPF_EF_DESIGN.ServiceReference1.ContatoBag[] SearchContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchContact", ReplyAction="http://tempuri.org/IService1/SearchContactResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag[]> SearchContactAsync(object cliObj);
+        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag[]> SearchContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -663,59 +353,59 @@ namespace WPF_EF_DESIGN.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.Clientes CreateClient() {
+        public bool CreateClient() {
             return base.Channel.CreateClient();
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.Clientes> CreateClientAsync() {
+        public System.Threading.Tasks.Task<bool> CreateClientAsync() {
             return base.Channel.CreateClientAsync();
         }
         
-        public bool DeleteClient(object cliObj) {
+        public bool DeleteClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.DeleteClient(cliObj);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteClientAsync(object cliObj) {
+        public System.Threading.Tasks.Task<bool> DeleteClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.DeleteClientAsync(cliObj);
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.ClienteBag[] SearchClient() {
-            return base.Channel.SearchClient();
+        public WPF_EF_DESIGN.ServiceReference1.ClienteBag[] SearchClient(string query, string value) {
+            return base.Channel.SearchClient(query, value);
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag[]> SearchClientAsync() {
-            return base.Channel.SearchClientAsync();
+        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag[]> SearchClientAsync(string query, string value) {
+            return base.Channel.SearchClientAsync(query, value);
         }
         
-        public bool UpdateClient() {
-            return base.Channel.UpdateClient();
+        public bool UpdateClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+            return base.Channel.UpdateClient(cliObj);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateClientAsync() {
-            return base.Channel.UpdateClientAsync();
+        public System.Threading.Tasks.Task<bool> UpdateClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+            return base.Channel.UpdateClientAsync(cliObj);
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.ContatoBag CreateContact(object cliObj) {
+        public WPF_EF_DESIGN.ServiceReference1.ContatoBag CreateContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.CreateContact(cliObj);
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag> CreateContactAsync(object cliObj) {
+        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag> CreateContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.CreateContactAsync(cliObj);
         }
         
-        public bool DeleteContact(object cliObj, object conObj) {
+        public bool DeleteContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj) {
             return base.Channel.DeleteContact(cliObj, conObj);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteContactAsync(object cliObj, object conObj) {
+        public System.Threading.Tasks.Task<bool> DeleteContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj) {
             return base.Channel.DeleteContactAsync(cliObj, conObj);
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.ContatoBag[] SearchContact(object cliObj) {
+        public WPF_EF_DESIGN.ServiceReference1.ContatoBag[] SearchContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.SearchContact(cliObj);
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag[]> SearchContactAsync(object cliObj) {
+        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag[]> SearchContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.SearchContactAsync(cliObj);
         }
     }

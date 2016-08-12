@@ -102,14 +102,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WPF_EF_DESIGN.exe" size="30208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WPF_EF_DESIGN.exe" size="27648">
       <assemblyIdentity name="WPF_EF_DESIGN" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/k0fHI4SSUHe/qeWHlL/O6/L93mmZxThKwpfCt9VR1Y=</dsig:DigestValue>
+        <dsig:DigestValue>/h55aTbDDunR9U80k29WG2N/LjIMpMiouAYkolLlyvo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

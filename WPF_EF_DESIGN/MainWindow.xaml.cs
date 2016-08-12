@@ -37,7 +37,7 @@ namespace WPF_EF_DESIGN
             //cliLista = wcfService.SearchClient();
             try
             {
-                var teste = wcfService.SearchClient();
+                var teste = wcfService.SearchClient("", "");
                 listClients.ItemsSource = teste;
             }
             catch (CommunicationException e)
@@ -59,13 +59,37 @@ namespace WPF_EF_DESIGN
             tabControlContacts.SelectedItem = item;
         }
 
+        private void UpdateListBox()
+        {
+            string valueField = textBoxSearch.Text.ToString();
+            string queryField = comboBox.SelectedItem.ToString().ToLower();
+            if (checkBoxFilter.IsChecked == true)
+            {
+                queryField += "obs";
+            }
+            if (checkBoxFilter1.IsChecked == true)
+            {
+                queryField += "contato";
+            }
+            listClients.ItemsSource = wcfService.SearchClient(queryField, valueField);
+        }
+
+        private void ResetFilters()
+        {
+            textBoxSearch.Text = "";
+            comboBox.SelectedItem = comboBox.Items[0];
+            checkBoxFilter.IsChecked = false;
+            checkBoxFilter1.IsChecked = false;
+        }
+
         private void NewClient_Click(object sender, RoutedEventArgs e)
         {
             /*Clientes cli = new Clientes() { Nome = "Não Identificado" };
             _context.Clientes.Add(cli);
             cliLista.Add(cli);*/
             wcfService.CreateClient();
-            //listClients.ItemsSource = wcfService.SearchClient();
+            ResetFilters();
+            UpdateListBox();
         }
 
         private void DeleteClient_Click(object sender, RoutedEventArgs e)
@@ -78,14 +102,24 @@ namespace WPF_EF_DESIGN
                 //cliLista.Remove((Clientes)listClients.SelectedItem);
                 _context.Clientes.Remove(cli);
                 cliLista.Remove(cli);*/
-                wcfService.DeleteClient((ServiceReference1.Clientes)listClients.SelectedItem);
+                wcfService.DeleteClient((ServiceReference1.ClienteBag)listClients.SelectedItem);
+                ResetFilters();
+                UpdateListBox();
             }
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            //_context.SaveChanges();
+            /*_context.SaveChanges();
             wcfService.UpdateClient();
+            listClients.ItemsSource = wcfService.SearchClient();*/
+
+            if (listClients.SelectedItem != null)
+            {
+                wcfService.UpdateClient((ServiceReference1.ClienteBag)listClients.SelectedItem);
+                ResetFilters();
+                UpdateListBox();
+            }
         }
 
         private void NewContact_Click(object sender, RoutedEventArgs e)
@@ -96,7 +130,7 @@ namespace WPF_EF_DESIGN
                 Contatos con = new Contatos() { Cliente = cli.Id, Nome = "Não identificado" };
                 cli.Contatos.Add(con);
                 AdicionaTabContato(con);*/
-                ServiceReference1.ContatoBag con = wcfService.CreateContact((ServiceReference1.Clientes)listClients.SelectedItem);
+                ServiceReference1.ContatoBag con = wcfService.CreateContact((ServiceReference1.ClienteBag)listClients.SelectedItem);
                 AdicionaTabContato(con);
             }
         }
@@ -113,7 +147,7 @@ namespace WPF_EF_DESIGN
                 {
                     tabControlContacts.SelectedIndex = 0;
                 }*/
-                wcfService.DeleteContact((ServiceReference1.Clientes)listClients.SelectedItem, (ServiceReference1.Contatos)((ContatoControl)((TabItem)tabControlContacts.SelectedItem).Content).DataContext);
+                wcfService.DeleteContact((ServiceReference1.ClienteBag)listClients.SelectedItem, (ServiceReference1.ContatoBag)((ContatoControl)((TabItem)tabControlContacts.SelectedItem).Content).DataContext);
                 tabControlContacts.Items.Remove(tabControlContacts.SelectedItem);
                 if (tabControlContacts.Items.Count > 0)
                 {
@@ -133,6 +167,7 @@ namespace WPF_EF_DESIGN
                     AdicionaTabContato(c);
                 }*/
                 ServiceReference1.ContatoBag[] listCon = wcfService.SearchContact((ServiceReference1.ClienteBag)listClients.SelectedItem);
+                //wcfService.SearchContact((ServiceReference1.ClienteBag)listClients.SelectedItem);
                 foreach (var c in listCon)
                 {
                     AdicionaTabContato(c);
@@ -140,34 +175,14 @@ namespace WPF_EF_DESIGN
             }
         }
 
-        private void TextBoxName_TextChanged(object sender, TextChangedEventArgs e)
+        private void buttomSearch_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateListBox();
         }
 
-        private void TextBoxAddress_TextChanged(object sender, TextChangedEventArgs e)
+        private void textBoxSearch_GotFocus(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void TextBoxCity_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBoxEstate_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBoxPhone_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBoxObs_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            textBoxSearch.Text = "";
         }
     }
 }
