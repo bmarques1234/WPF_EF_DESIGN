@@ -1,0 +1,10 @@
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\bin\Debug\WindowsForms_Wcf.exe.config
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\bin\Debug\WindowsForms_Wcf.exe
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\bin\Debug\WindowsForms_Wcf.pdb
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\obj\Debug\WindowsForms_Wcf.csprojResolveAssemblyReference.cache
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\obj\Debug\WindowsForms_Wcf.Form1.resources
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\obj\Debug\WindowsForms_Wcf.Properties.Resources.resources
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\obj\Debug\WindowsForms_Wcf.csproj.GenerateResource.Cache
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\obj\Debug\WindowsForms_Wcf.exe
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\obj\Debug\WindowsForms_Wcf.pdb
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\WindowsForms_Wcf\obj\Debug\WindowsForms_Wcf.ContatoControl.resources
