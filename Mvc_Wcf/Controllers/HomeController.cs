@@ -3,30 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Mvc_Wcf.Models;
+using Mvc_Wcf.ServiceReference1;
 
 namespace Mvc_Wcf.Controllers
 {
     public class HomeController : Controller
     {
+        Client clientes = new Client();
+
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
+            return View("Index", clientes.GetClients());
         }
 
-        public ActionResult About()
+        public ActionResult UpdateList()
         {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
+            return View("Index", clientes.GetClients());
         }
 
-        public ActionResult Contact()
+        public ActionResult CreateClient()
         {
-            ViewBag.Message = "Your contact page.";
+            clientes.NewClient();
+            return RedirectToAction("Index");
+        }
 
-            return View();
+        public ActionResult DeleteClient(string ID)
+        {
+            clientes.DeleteClient(clientes.SearchClientByID(ID));
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult SaveClient(ClienteBag client)
+        {
+            clientes.SaveClient(client);
+            return RedirectToAction("Index");
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_EF_DESIGN.ServiceReference1 {
+namespace Mvc_Wcf.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
     
@@ -26,7 +26,7 @@ namespace WPF_EF_DESIGN.ServiceReference1 {
         private string CidadeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_EF_DESIGN.ServiceReference1.ContatoBag[] ContatosField;
+        private Mvc_Wcf.ServiceReference1.ContatoBag[] ContatosField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EnderecoField;
@@ -70,7 +70,7 @@ namespace WPF_EF_DESIGN.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_EF_DESIGN.ServiceReference1.ContatoBag[] Contatos {
+        public Mvc_Wcf.ServiceReference1.ContatoBag[] Contatos {
             get {
                 return this.ContatosField;
             }
@@ -290,55 +290,55 @@ namespace WPF_EF_DESIGN.ServiceReference1 {
         System.Threading.Tasks.Task<bool> CreateClientAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteClient", ReplyAction="http://tempuri.org/IService1/DeleteClientResponse")]
-        bool DeleteClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        bool DeleteClient(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteClient", ReplyAction="http://tempuri.org/IService1/DeleteClientResponse")]
-        System.Threading.Tasks.Task<bool> DeleteClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        System.Threading.Tasks.Task<bool> DeleteClientAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchClientByID", ReplyAction="http://tempuri.org/IService1/SearchClientByIDResponse")]
-        WPF_EF_DESIGN.ServiceReference1.ClienteBag SearchClientByID(string ID);
+        Mvc_Wcf.ServiceReference1.ClienteBag SearchClientByID(string ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchClientByID", ReplyAction="http://tempuri.org/IService1/SearchClientByIDResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag> SearchClientByIDAsync(string ID);
+        System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ClienteBag> SearchClientByIDAsync(string ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchClient", ReplyAction="http://tempuri.org/IService1/SearchClientResponse")]
-        WPF_EF_DESIGN.ServiceReference1.ClienteBag[] SearchClient(string query, string value);
+        Mvc_Wcf.ServiceReference1.ClienteBag[] SearchClient(string query, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchClient", ReplyAction="http://tempuri.org/IService1/SearchClientResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag[]> SearchClientAsync(string query, string value);
+        System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ClienteBag[]> SearchClientAsync(string query, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateClient", ReplyAction="http://tempuri.org/IService1/UpdateClientResponse")]
-        bool UpdateClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        bool UpdateClient(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateClient", ReplyAction="http://tempuri.org/IService1/UpdateClientResponse")]
-        System.Threading.Tasks.Task<bool> UpdateClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        System.Threading.Tasks.Task<bool> UpdateClientAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateContact", ReplyAction="http://tempuri.org/IService1/CreateContactResponse")]
-        WPF_EF_DESIGN.ServiceReference1.ContatoBag CreateContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        Mvc_Wcf.ServiceReference1.ContatoBag CreateContact(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateContact", ReplyAction="http://tempuri.org/IService1/CreateContactResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag> CreateContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ContatoBag> CreateContactAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteContact", ReplyAction="http://tempuri.org/IService1/DeleteContactResponse")]
-        bool DeleteContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj);
+        bool DeleteContact(Mvc_Wcf.ServiceReference1.ClienteBag cliObj, Mvc_Wcf.ServiceReference1.ContatoBag conObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteContact", ReplyAction="http://tempuri.org/IService1/DeleteContactResponse")]
-        System.Threading.Tasks.Task<bool> DeleteContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj);
+        System.Threading.Tasks.Task<bool> DeleteContactAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj, Mvc_Wcf.ServiceReference1.ContatoBag conObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchContact", ReplyAction="http://tempuri.org/IService1/SearchContactResponse")]
-        WPF_EF_DESIGN.ServiceReference1.ContatoBag[] SearchContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        Mvc_Wcf.ServiceReference1.ContatoBag[] SearchContact(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchContact", ReplyAction="http://tempuri.org/IService1/SearchContactResponse")]
-        System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag[]> SearchContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj);
+        System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ContatoBag[]> SearchContactAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : WPF_EF_DESIGN.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : Mvc_Wcf.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<WPF_EF_DESIGN.ServiceReference1.IService1>, WPF_EF_DESIGN.ServiceReference1.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<Mvc_Wcf.ServiceReference1.IService1>, Mvc_Wcf.ServiceReference1.IService1 {
         
         public Service1Client() {
         }
@@ -367,59 +367,59 @@ namespace WPF_EF_DESIGN.ServiceReference1 {
             return base.Channel.CreateClientAsync();
         }
         
-        public bool DeleteClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public bool DeleteClient(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.DeleteClient(cliObj);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public System.Threading.Tasks.Task<bool> DeleteClientAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.DeleteClientAsync(cliObj);
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.ClienteBag SearchClientByID(string ID) {
+        public Mvc_Wcf.ServiceReference1.ClienteBag SearchClientByID(string ID) {
             return base.Channel.SearchClientByID(ID);
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag> SearchClientByIDAsync(string ID) {
+        public System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ClienteBag> SearchClientByIDAsync(string ID) {
             return base.Channel.SearchClientByIDAsync(ID);
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.ClienteBag[] SearchClient(string query, string value) {
+        public Mvc_Wcf.ServiceReference1.ClienteBag[] SearchClient(string query, string value) {
             return base.Channel.SearchClient(query, value);
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ClienteBag[]> SearchClientAsync(string query, string value) {
+        public System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ClienteBag[]> SearchClientAsync(string query, string value) {
             return base.Channel.SearchClientAsync(query, value);
         }
         
-        public bool UpdateClient(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public bool UpdateClient(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.UpdateClient(cliObj);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateClientAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public System.Threading.Tasks.Task<bool> UpdateClientAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.UpdateClientAsync(cliObj);
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.ContatoBag CreateContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public Mvc_Wcf.ServiceReference1.ContatoBag CreateContact(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.CreateContact(cliObj);
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag> CreateContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ContatoBag> CreateContactAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.CreateContactAsync(cliObj);
         }
         
-        public bool DeleteContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj) {
+        public bool DeleteContact(Mvc_Wcf.ServiceReference1.ClienteBag cliObj, Mvc_Wcf.ServiceReference1.ContatoBag conObj) {
             return base.Channel.DeleteContact(cliObj, conObj);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj, WPF_EF_DESIGN.ServiceReference1.ContatoBag conObj) {
+        public System.Threading.Tasks.Task<bool> DeleteContactAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj, Mvc_Wcf.ServiceReference1.ContatoBag conObj) {
             return base.Channel.DeleteContactAsync(cliObj, conObj);
         }
         
-        public WPF_EF_DESIGN.ServiceReference1.ContatoBag[] SearchContact(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public Mvc_Wcf.ServiceReference1.ContatoBag[] SearchContact(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.SearchContact(cliObj);
         }
         
-        public System.Threading.Tasks.Task<WPF_EF_DESIGN.ServiceReference1.ContatoBag[]> SearchContactAsync(WPF_EF_DESIGN.ServiceReference1.ClienteBag cliObj) {
+        public System.Threading.Tasks.Task<Mvc_Wcf.ServiceReference1.ContatoBag[]> SearchContactAsync(Mvc_Wcf.ServiceReference1.ClienteBag cliObj) {
             return base.Channel.SearchContactAsync(cliObj);
         }
     }

@@ -9,6 +9,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wcf_Exemplo", "..\Wcf_Exemplo\Wcf_Exemplo\Wcf_Exemplo.csproj", "{41CC48BC-783D-4AE5-AFD1-947410AC6742}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc_Wcf", "Mvc_Wcf\Mvc_Wcf.csproj", "{13FAD92C-F478-4008-A9ED-7CBA559C56A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41CC48BC-783D-4AE5-AFD1-947410AC6742} = {41CC48BC-783D-4AE5-AFD1-947410AC6742}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms_Wcf", "WindowsForms_Wcf\WindowsForms_Wcf.csproj", "{C645189C-A381-4257-983C-C59F2959E072}"
 	ProjectSection(ProjectDependencies) = postProject
