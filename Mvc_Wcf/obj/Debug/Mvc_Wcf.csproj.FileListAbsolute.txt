@@ -80,6 +80,6 @@ C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_W
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_Wcf\bin\ru\System.Spatial.resources.dll
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_Wcf\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_Wcf\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_Wcf\obj\Debug\Mvc_Wcf.csprojResolveAssemblyReference.cache
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_Wcf\obj\Debug\Mvc_Wcf.dll
 C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_Wcf\obj\Debug\Mvc_Wcf.pdb
+C:\Users\bruno.marques\Documents\Visual Studio 2012\Projects\WPF_EF_DESIGN\Mvc_Wcf\obj\Debug\Mvc_Wcf.csprojResolveAssemblyReference.cache
