@@ -1,13 +1,19 @@
-﻿<h2 id="clientName" data-id="@ViewBag.Client.Id" >@ViewBag.Client.Nome</h2>
-<label>Nome:</label>
-<input class="textBox" id="textBoxNome" type="text" value="@ViewBag.Client.Nome" />
-<label>Endereço:</label>
-<input class="textBox" id="textBoxEndereco" type="text" value="@ViewBag.Client.Endereco" />
-<label>Cidade:</label>
-<input class="textBox" id="textBoxCidade" type="text" value="@ViewBag.Client.Cidade" />
-<label>Estado:</label>
-<input class="textBox" id="textBoxEstado" type="text" value="@ViewBag.Client.Estado" />
-<label>Telefone:</label>
-<input class="textBox" id="textBoxTelefone" type="text" value="@ViewBag.Client.Telefone" />
-<label>Obs:</label>
-<input class="textBox" id="textBoxObs" type="text" value="@ViewBag.Client.Obs" />
+﻿@model Mvc_Wcf.ServiceReference1.ClienteBag
+@using(Html.BeginForm("SaveClient", "Home")){
+    <h2 id="clientName" data-id="@ViewBag.Client.Id" >@ViewBag.Client.Nome</h2>
+    <label>Id:</label>
+    <input name="ClienteBag.Id" class="textBox" id="textBoxId" type="text" value=@ViewBag.Client.Id />
+    <label>Nome:</label>
+    <input name="ClienteBag.Nome" class="textBox" id="textBoxNome" type="text" value="@ViewBag.Client.Nome" />
+    <label>Endereço:</label>
+    <input name="ClienteBag.Endereco" class="textBox" id="textBoxEndereco" type="text" value="@ViewBag.Client.Endereco" />
+    <label>Cidade:</label>
+    <input name="ClienteBag.Cidade" class="textBox" id="textBoxCidade" type="text" value="@ViewBag.Client.Cidade" />
+    <label>Estado:</label>
+    <input name="ClienteBag.Estado" class="textBox" id="textBoxEstado" type="text" value="@ViewBag.Client.Estado" />
+    <label>Telefone:</label>
+    <input name="ClienteBag.Telefone" class="textBox" id="textBoxTelefone" type="text" value="@ViewBag.Client.Telefone" />
+    <label>Obs:</label>
+    <input name="ClienteBag.Obs" class="textBox" id="textBoxObs" type="text" value="@ViewBag.Client.Obs" />
+    <input type="submit" value="Submit" />
+}

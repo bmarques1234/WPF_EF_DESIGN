@@ -13,38 +13,52 @@
             window.location.href = '/Home/DeleteClient/' + $("#clientName").data("id");
         }
     });
-    $("#BtnSave").on("click", function () {
+    $("#BtnNewContact").on("click", function () {
         if ($("#clientName").data("ID") != "") {
-            /*var cli = {};
-            cli.Id = parseInt($("#clientName").data("id"), 10);
-            cli.Nome = $("#textBoxNome").val();
-            cli.Endereco = "ivotis";
-            cli.Cidade = "";
-            cli.Estado = "";
-            cli.Telefone = "";
-            cli.Obs = "";
-            //cli.Contatos = [];
-            console.log(cli);*/
-            $.ajax({
-                url: "/Home/SaveClient",
-                type: "GET",
-                dataType: 'json',
-                data: {
-                    Id: parseInt($("#clientName").data("id"), 10),
-                    Nome: $("#textBoxNome").val(),
-                    Endereco: "ivotis",
-                    Cidade: "",
-                    Estado: "",
-                    Telefone: "",
-                    Obs: ""
-                },
-                success: function () {
-                    alert("olar");
-                },
-                error: function () {
-                    alert("errar");
-                }
-            });
+            window.location.href = '/Home/CreateContact/' + parseInt($("#clientName").data("id"), 10);
         }
     });
+    $(".BtnDeleteContact").on("click", function () {
+        if ($("#clientName").data("ID") != "") {
+            window.location.href = '/Home/DeleteContact/' + parseInt($("#clientName").data("id"), 10) + '/' + parseInt($(this).data("id"), 10);
+        }
+    });
+
+//    $("#BtnSave").on("click", function () {
+//        if ($("#clientName").data("ID") != "") {
+//            var cli = {
+//                Id: /*parseInt($("#clientName").data("id"), 10)*/38,
+//                Nome: /*$("#textBoxNome").val()*/"Queror",
+//                Endereco: "ivotis",
+//                Cidade: "",
+//                Estado: "",
+//                Telefone: "",
+//                Obs: ""};
+//            //cli.Contatos = [];
+//            //console.log(cli);
+//            $.ajax({
+//                url: "/Home/SaveClient",
+//                type: "GET",
+//                dataType: 'json',
+//                //data: {
+//              //    Id: /*parseInt($("#clientName").data("id"), 10)*/38,
+//              //    Nome: /*$("#textBoxNome").val()*/"Queror",
+//              //    Endereco: "ivotis",
+//              //    Cidade: "",
+//                //    Estado: "",
+//               //    Telefone: "",
+//                //    Obs: ""},
+//                data: {cliObj: cli},
+//                //data: {teste: "testando"},
+//                //data: JSON.stringify({cliObj: cli}),
+//                contentType: "application/json; charset = utf-8",
+//                success: function () {
+//                    alert("olar");
+//                },
+//                error: function () {
+//                    alert("errar");
+//                }
+//            });
+//        }
+//    });
 });

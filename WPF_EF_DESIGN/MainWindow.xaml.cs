@@ -102,7 +102,8 @@ namespace WPF_EF_DESIGN
                 //cliLista.Remove((Clientes)listClients.SelectedItem);
                 _context.Clientes.Remove(cli);
                 cliLista.Remove(cli);*/
-                wcfService.DeleteClient((ServiceReference1.ClienteBag)listClients.SelectedItem);
+                ServiceReference1.ClienteBag client = (ServiceReference1.ClienteBag)listClients.SelectedItem;
+                wcfService.DeleteClient(client.Id);
                 ResetFilters();
                 UpdateListBox();
             }
@@ -130,7 +131,8 @@ namespace WPF_EF_DESIGN
                 Contatos con = new Contatos() { Cliente = cli.Id, Nome = "Não identificado" };
                 cli.Contatos.Add(con);
                 AdicionaTabContato(con);*/
-                ServiceReference1.ContatoBag con = wcfService.CreateContact((ServiceReference1.ClienteBag)listClients.SelectedItem);
+                ServiceReference1.ClienteBag client = (ServiceReference1.ClienteBag)listClients.SelectedItem;
+                ServiceReference1.ContatoBag con = wcfService.CreateContact(client.Id);
                 AdicionaTabContato(con);
             }
         }
@@ -147,7 +149,11 @@ namespace WPF_EF_DESIGN
                 {
                     tabControlContacts.SelectedIndex = 0;
                 }*/
-                wcfService.DeleteContact((ServiceReference1.ClienteBag)listClients.SelectedItem, (ServiceReference1.ContatoBag)((ContatoControl)((TabItem)tabControlContacts.SelectedItem).Content).DataContext);
+
+                ServiceReference1.ClienteBag client = (ServiceReference1.ClienteBag)listClients.SelectedItem;
+                ServiceReference1.ContatoBag contact = (ServiceReference1.ContatoBag)((ContatoControl)((TabItem)tabControlContacts.SelectedItem).Content).DataContext;
+                
+                wcfService.DeleteContact(client.Id, contact.Id);
                 tabControlContacts.Items.Remove(tabControlContacts.SelectedItem);
                 if (tabControlContacts.Items.Count > 0)
                 {
@@ -166,7 +172,8 @@ namespace WPF_EF_DESIGN
                 {
                     AdicionaTabContato(c);
                 }*/
-                ServiceReference1.ContatoBag[] listCon = wcfService.SearchContact((ServiceReference1.ClienteBag)listClients.SelectedItem);
+                ServiceReference1.ClienteBag client = (ServiceReference1.ClienteBag)listClients.SelectedItem;
+                ServiceReference1.ContatoBag[] listCon = wcfService.SearchContact(client.Id);
                 //wcfService.SearchContact((ServiceReference1.ClienteBag)listClients.SelectedItem);
                 foreach (var c in listCon)
                 {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Mvc_Wcf.ServiceReference1;
+using Mvc_Wcf.Models;
 
 namespace Mvc_Wcf.Controllers
 {
@@ -16,7 +17,14 @@ namespace Mvc_Wcf.Controllers
             ViewBag.Clients = wcfService.SearchClient("", "");
             if(ViewBag.Client == null) 
             {
-                ViewBag.Client = new ClienteBag();
+                ViewBag.Client = new ClienteBag() 
+                {
+                    Contatos = new ContatoBag[1]
+                };
+            }
+            if(ViewBag.Contact == null)
+            {
+                ViewBag.Contact = new ContatoBag[1];
             }
             return View("Index");
         }
@@ -26,7 +34,14 @@ namespace Mvc_Wcf.Controllers
             ViewBag.Clients = wcfService.SearchClient("", "");
             if (ViewBag.Client == null)
             {
-                ViewBag.Client = new ClienteBag();
+                ViewBag.Client = new ClienteBag()
+                {
+                    Contatos = new ContatoBag[1]
+                };
+            }
+            if (ViewBag.Contact == null)
+            {
+                ViewBag.Contact = new ContatoBag[1];
             }
             return View("Index");
         }
@@ -39,41 +54,40 @@ namespace Mvc_Wcf.Controllers
 
         public ActionResult DeleteClient(string ID)
         {
-            wcfService.DeleteClient(wcfService.SearchClientByID(ID));
+            wcfService.DeleteClient(int.Parse(ID));
             return RedirectToAction("Index");
         }
 
-        public ActionResult SaveClient(Client cli)
+        [HttpPost]
+        public ActionResult SaveClient(ClienteBag ClienteBag)
         {
-            ClienteBag client = new ClienteBag()
-            {
-                Cidade = cli.Cidade,
-                Endereco = cli.Endereco,
-                Estado = cli.Estado,
-                Nome = cli.Nome,
-                Obs = cli.Obs,
-                Telefone = cli.Telefone,
-                Id = cli.Id
-            };
-            wcfService.UpdateClient(client);
+            wcfService.UpdateClient(ClienteBag);
             return RedirectToAction("Index");
         }
 
         public ActionResult SearchClientByID(string ID) {
             ViewBag.Client = wcfService.SearchClientByID(ID);
             ViewBag.Clients = wcfService.SearchClient("", "");
-            return View("Index");
+            ViewBag.Contact = wcfService.SearchContact(int.Parse(ID));
+            return View("Index", wcfService.SearchClientByID(ID));
         }
 
-        public class Client
+        public ActionResult CreateContact(int Id)
         {
-            public string Nome;
-            public string Cidade;
-            public string Endereco;
-            public string Estado;
-            public string Telefone;
-            public string Obs;
-            public int Id;
+            wcfService.CreateContact(Id);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteContact(int cliId, int conId)
+        {
+            wcfService.DeleteContact(cliId, conId);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult SearchContact(int cliId)
+        {
+            wcfService.SearchContact(cliId);
+            return RedirectToAction("Index");
         }
     }
 }
