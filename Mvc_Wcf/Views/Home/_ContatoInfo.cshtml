@@ -1,0 +1,18 @@
+﻿@model Mvc_Wcf.ServiceReference1.ContatoBag
+@using(Html.BeginForm("SaveContact", "Home")){
+    <h2 id="contactName">@Model.Nome</h2>
+    <label>Client Id:</label>
+    <input name="ContatoBag.Cliente" class="textBox" id="textBoxClient" type="text" value=@Model.Cliente />
+    <label>Id:</label>
+    <input name="ContatoBag.Id" class="textBox" id="textBoxId" type="text" value=@Model.Id />
+    <label>Nome:</label>
+    <input name="ContatoBag.Nome" class="textBox" id="textBoxNome" type="text" value="@Model.Nome" />
+    <label>Telefone:</label>
+    <input name="ContatoBag.Telefone" class="textBox" id="textBoxTelefone" type="text" value="@Model.Telefone" />
+    <label>Email:</label>
+    <input name="ContatoBag.Email" class="textBox" id="textBoxEmail" type="text" value="@Model.Email" />
+    <br />
+    <input type="submit" value="Salvar" class="btn btn-success" />
+    <button class="btn btn-danger" id="BtnDeleteContact" data-id="@Model.Id">Excluir</button>
+    <br />
+}

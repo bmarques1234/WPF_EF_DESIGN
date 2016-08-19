@@ -1,0 +1,15 @@
+﻿@model Mvc_Wcf.ServiceReference1.ContatoBag[]
+<nav>
+  <ul class="pagination">
+    @{
+        foreach(var c in Model)
+        {
+            <li>
+                <span class="page" data-id=@c.Id>@c.Id <span class="sr-only"></span></span>
+            </li>
+        }
+    }
+  </ul>
+</nav>
+<button id="BtnNewContact" class="btn btn-default">Novo</button>
+<div id="ContactInfo"></div>

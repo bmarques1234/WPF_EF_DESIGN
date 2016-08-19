@@ -287,8 +287,9 @@
     <None Include="Service References\ServiceReference1\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\Home\ClientInfo.cshtml" />
-    <Content Include="Views\Home\ContactInfo.cshtml" />
+    <Content Include="Views\Home\_ClienteInfo.cshtml" />
+    <Content Include="Views\Home\_ContatoInfo.cshtml" />
+    <Content Include="Views\Home\_ContatoTab.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,34 +15,12 @@ namespace Mvc_Wcf.Controllers
         public ActionResult Index()
         {
             ViewBag.Clients = wcfService.SearchClient("", "");
-            if(ViewBag.Client == null) 
-            {
-                ViewBag.Client = new ClienteBag() 
-                {
-                    Contatos = new ContatoBag[1]
-                };
-            }
-            if(ViewBag.Contact == null)
-            {
-                ViewBag.Contact = new ContatoBag[1];
-            }
             return View("Index");
         }
 
         public ActionResult UpdateList()
         {
             ViewBag.Clients = wcfService.SearchClient("", "");
-            if (ViewBag.Client == null)
-            {
-                ViewBag.Client = new ClienteBag()
-                {
-                    Contatos = new ContatoBag[1]
-                };
-            }
-            if (ViewBag.Contact == null)
-            {
-                ViewBag.Contact = new ContatoBag[1];
-            }
             return View("Index");
         }
 
@@ -52,9 +30,9 @@ namespace Mvc_Wcf.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult DeleteClient(string ID)
+        public ActionResult DeleteClient(int ID)
         {
-            wcfService.DeleteClient(int.Parse(ID));
+            wcfService.DeleteClient(ID);
             return RedirectToAction("Index");
         }
 
@@ -65,29 +43,40 @@ namespace Mvc_Wcf.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult SearchClientByID(string ID) {
+        public ActionResult SearchClientByID(int ID) {
             ViewBag.Client = wcfService.SearchClientByID(ID);
-            ViewBag.Clients = wcfService.SearchClient("", "");
-            ViewBag.Contact = wcfService.SearchContact(int.Parse(ID));
-            return View("Index", wcfService.SearchClientByID(ID));
+            return PartialView("_ClienteInfo", wcfService.SearchClientByID(ID));
         }
 
         public ActionResult CreateContact(int Id)
         {
             wcfService.CreateContact(Id);
-            return RedirectToAction("Index");
+            return PartialView("_ContatoTab", wcfService.SearchContact(Id));
         }
 
         public ActionResult DeleteContact(int cliId, int conId)
         {
             wcfService.DeleteContact(cliId, conId);
+            return PartialView("_ContatoTab", wcfService.SearchContact(cliId));
+        }
+
+        public ActionResult SaveContact(ContatoBag ContatoBag)
+        {
+            wcfService.UpdateContact(ContatoBag);
+            //return PartialView("_ContatoTab", wcfService.SearchContact(ContatoBag.Cliente));
             return RedirectToAction("Index");
         }
 
         public ActionResult SearchContact(int cliId)
         {
-            wcfService.SearchContact(cliId);
-            return RedirectToAction("Index");
+            ViewBag.Contact = wcfService.SearchContact(cliId);
+            return PartialView("_ContatoTab", wcfService.SearchContact(cliId));
+        }
+
+        public ActionResult SearchContactByID(int ID)
+        {
+            ViewBag.Contact = wcfService.SearchContactByID(ID);
+            return PartialView("_ContatoInfo", wcfService.SearchContactByID(ID));
         }
     }
 }
